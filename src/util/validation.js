@@ -83,7 +83,7 @@ const Validation = {
   },
 
   isValidHostname: (hostname) => {
-    return validator.isFQDN(hostname);
+    return validator.isFQDN(hostname, { require_tld: false });
   },
 
   isValidPort: (port) => {
