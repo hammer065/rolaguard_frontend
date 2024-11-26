@@ -792,7 +792,7 @@ class DataCollectorsNewComponent extends React.Component {
                   )}
                   {(dataCollectorTypeCode === "chirpstack_collector" 
                   || dataCollectorTypeCode === "chirpstack_v4_collector") && (
-                    <div>{/*
+                    <div>
                       <Form.Group>
                         <Form.Field required className="mb0">
                           <Form.Input
@@ -841,7 +841,7 @@ class DataCollectorsNewComponent extends React.Component {
                               })}
                           </div>
                         </Form.Field>
-                            </Form.Group>*/}
+                      </Form.Group>
                       <Form.Group>
                         <Form.Field>
                           <Form.Checkbox
