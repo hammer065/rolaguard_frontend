@@ -1,6 +1,7 @@
 import io from 'socket.io-client';
 
 const WS_HOST = window.RUNTIME_WS_HOST ? window.RUNTIME_WS_HOST : 'http://localhost.rolaguard:30003/';
+const WS_PATH = window.RUNTIME_WS_PATH ? window.RUNTIME_WS_PATH : undefined;
 
 let socket = null;
 const cbForNewNotification = {};
@@ -34,7 +35,7 @@ function handleUpdatedDataCollector(msg) {
 }
 
 function connect() {
-    socket = io.connect(WS_HOST);
+    socket = io.connect(WS_HOST, { path: WS_PATH });
     socket.on('connect', () => {
         let token = localStorage.getItem("token");
         socket.emit('authorization', {token});

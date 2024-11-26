@@ -7,6 +7,7 @@ if [ ! -z ${REACT_APP_API_HOST} ]; then
 cat <<EOT > /usr/share/nginx/html/config.js
  window.RUNTIME_API_HOST='${REACT_APP_API_HOST}';
  window.RUNTIME_WS_HOST='${REACT_APP_WS_HOST}';
+ window.RUNTIME_WS_PATH='${REACT_APP_WS_PATH}';
  window.RECAPTCHA_SITEKEY='${RECAPTCHA_SITEKEY}';
 EOT
 else
