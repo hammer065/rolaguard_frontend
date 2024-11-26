@@ -164,6 +164,7 @@ class RegisterPage extends React.Component {
 
   render() {
     const { user, showSuccessMessage } = this.state;
+    const { history } = this.props;
     let hideSave =
       Validation.isEmpty(user.full_name) ||
       Validation.isEmpty(user.email) ||
@@ -298,7 +299,7 @@ class RegisterPage extends React.Component {
               <Segment>
                 <Message className="mh-auto" color="green">
                   An email was sent to the account provided.{" "}
-                  <a href="/login">back to login</a>
+                  <a onClick={() => history.push("/login")}>back to login</a>
                 </Message>
               </Segment>
             )}

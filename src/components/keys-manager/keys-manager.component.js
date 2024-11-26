@@ -11,6 +11,7 @@ import {
 import Validation from "../../util/validation";
 import EmptyComponent from "../utils/empty.component";
 import LoaderComponent from "../utils/loader.component";
+import { Link } from "react-router-dom";
 
 import "./keys-manager.component.css";
 
@@ -47,7 +48,7 @@ const KeysManager = (props) => {
         <div style={{ textAlign: "center" }}>
           <Message visible error header="Oops!" style={{ maxWidth: "100%" }}>
             Something went wrong! Try again later or{" "}
-            <a href="#" onClick={() => keysStore.getKeysFromAPI()}>
+            <a onClick={() => keysStore.getKeysFromAPI()}>
               reload this component
             </a>
             .

@@ -49,6 +49,7 @@ class EmailActivation extends React.Component {
 
   render() {
     const { isLoading, result, title, email } = this.state;
+    const { history } = this.props;
 
     return (
       <div
@@ -87,7 +88,7 @@ class EmailActivation extends React.Component {
                     <Icon size="massive" name="check circle" color="green" />
                     <h3>
                       The email {email} has been activated successfully{" "}
-                      <a href="/login">back to login</a>
+                      <a onClick={() => history.push("/login")}>back to login</a>
                     </h3>
                   </div>
                 )}
@@ -97,7 +98,7 @@ class EmailActivation extends React.Component {
                       <Icon size="massive" name="dont" color="red" />
                       <h3>
                         This token doesn't exist or has expired{" "}
-                        <a href="/login">back to login</a>
+                        <a onClick={() => history.push("/login")}>back to login</a>
                       </h3>
                     </div>
                   )}
@@ -106,7 +107,7 @@ class EmailActivation extends React.Component {
                     <Icon size="massive" name="warning circle" color="yellow" />
                     <h3>
                       That email was activated previously{" "}
-                      <a href="/login">back to login</a>
+                      <a onClick={() => history.push("/login")}>back to login</a>
                     </h3>
                   </div>
                 )}

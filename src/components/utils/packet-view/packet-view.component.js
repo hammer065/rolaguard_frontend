@@ -190,7 +190,7 @@ const PacketViewer = (props) => {
                 width="4"
                 className="technical-details-table-row-right"
               >
-                <a href="#" onClick={() => downloadTxtFile(props.packetData)}>
+                <a onClick={() => downloadTxtFile(props.packetData)}>
                       download raw data
                     </a>
               </Table.Cell>
@@ -199,7 +199,7 @@ const PacketViewer = (props) => {
                   width="4"
                   className="technical-details-table-row-right"
                 >
-                    <a href="#" onClick={() => downloadTxtFile(props.previousPacketData)}>
+                    <a onClick={() => downloadTxtFile(props.previousPacketData)}>
                       download raw data
                     </a>
                 </Table.Cell>

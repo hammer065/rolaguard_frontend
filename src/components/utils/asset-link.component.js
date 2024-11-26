@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import _ from "lodash";
 import "./asset-link.component.css";
 
@@ -13,14 +14,14 @@ const AssetLinkComponent = (props) => {
   ) {
     return (
       <React.Fragment>
-        <a
+        <Link
           className="hover-underline"
           target="_blank"
-          href={`/dashboard/assets/${normalizedType}/${id}/view`}
+          to={`/dashboard/assets/${normalizedType}/${id}/view`}
           rel="noopener noreferrer"
         >
           {title}
-        </a>
+        </Link>
       </React.Fragment>
     );
   } else {

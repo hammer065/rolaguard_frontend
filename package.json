@@ -2,6 +2,7 @@
   "name": "configurable-overrides",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "apexcharts": "^3.20.0",
     "axios": "^0.21.2",
